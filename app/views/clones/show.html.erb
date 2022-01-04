@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @clone.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @clone.DOB %>
+</p>
+
+<%= link_to 'Edit', edit_clone_path(@clone) %> |
+<%= link_to 'Back', clones_path %>

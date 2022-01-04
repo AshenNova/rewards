@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reward2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reward</th>
+      <th>Price</th>
+      <th>Value</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reward2s.each do |reward2| %>
+      <tr>
+        <td><%= reward2.reward %></td>
+        <td><%= reward2.price %></td>
+        <td><%= reward2.value %></td>
+        <td><%= reward2.status %></td>
+        <td><%= link_to 'Show', reward2 %></td>
+        <td><%= link_to 'Edit', edit_reward2_path(reward2) %></td>
+        <td><%= link_to 'Destroy', reward2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reward2', new_reward2_path %>
